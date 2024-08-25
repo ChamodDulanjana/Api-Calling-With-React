@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from "./button/Button.tsx";
 
-const UpdateUser = () => {
+const UpdateUserBtn = () => {
 
     const handleClickEvent = () => {
         console.log("Click Event Update");
@@ -14,4 +14,4 @@ const UpdateUser = () => {
     );
 };
 
-export default UpdateUser;
+export default UpdateUserBtn;

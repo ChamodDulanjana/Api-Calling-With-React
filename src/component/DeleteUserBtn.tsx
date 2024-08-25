@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from "./button/Button.tsx";
 
-const DeleteUser = () => {
+const DeleteUserBtn = () => {
 
     const handleClickEvent = () => {
         console.log("clicked");
@@ -14,4 +14,4 @@ const DeleteUser = () => {
     );
 };
 
-export default DeleteUser;
+export default DeleteUserBtn;

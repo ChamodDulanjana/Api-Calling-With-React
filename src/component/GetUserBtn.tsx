@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from "./button/Button.tsx";
 
-const GetUser = () => {
+const GetUserBtn = () => {
 
     const handleClickEvent = () => {
         console.log("Click Event Get");
@@ -14,4 +14,4 @@ const GetUser = () => {
     );
 };
 
-export default GetUser;
+export default GetUserBtn;
