@@ -5,15 +5,15 @@ import CreateUser from "./pages/CreateUser.tsx";
 
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [header, setHeader] = useState("Manage Users")
 
   return (
     <div className="flex flex-col gap-10 items-center justify-center mt-10 w-full">
-      <h1 className="text-4xl font-bold text-gray-900 mb-20">Manage Users</h1>
+      <h1 className="text-4xl font-bold text-gray-900 mb-20">{header}</h1>
 
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={<Layout/>} />
+                <Route path="/" element={<Layout header={header} setHeader={setHeader}/>} />
                 <Route path="/create" element={<CreateUser/>}/>
             </Routes>
         </BrowserRouter>

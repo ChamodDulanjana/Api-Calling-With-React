@@ -2,10 +2,15 @@ import React from 'react';
 import Button from "./button/Button.tsx";
 import {Link} from "react-router-dom";
 
-const CreateUserBtn = () => {
+interface Props {
+    header:string;
+    setHeader:React.Dispatch<React.SetStateAction<string>>;
+}
+
+const CreateUserBtn = ({header, setHeader}:Props) => {
 
     const handleClickEvent = () => {
-        console.log("Click Event Register");
+        setHeader("Register User");
     }
 
     return (
