@@ -1,8 +1,10 @@
-import React, { useState} from 'react';
+import React, {useContext, useState} from 'react';
 import axios from "axios";
+import {GlobalContext} from "../context/GlobalContext.tsx";
 
 const GetUser = () => {
-    const [id, setId] = useState(0);
+
+    const {id, setId} = useContext(GlobalContext);
 
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");

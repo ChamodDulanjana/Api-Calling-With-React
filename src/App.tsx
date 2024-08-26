@@ -4,6 +4,7 @@ import {BrowserRouter, Route, Routes} from "react-router-dom";
 import CreateUser from "./pages/CreateUser.tsx";
 import {GlobalContext} from "./context/GlobalContext.tsx";
 import GetUser from "./pages/GetUser.tsx";
+import UpdateUser from "./pages/UpdateUser.tsx";
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
                 <Route path="/" element={<Layout/>} />
                 <Route path="/create" element={<CreateUser/>}/>
                 <Route path="/get" element={<GetUser/>}/>
+                <Route path="/update" element={<UpdateUser/>}/>
             </Routes>
         </BrowserRouter>
 

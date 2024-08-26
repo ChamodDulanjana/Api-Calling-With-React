@@ -1,16 +1,22 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import Button from "./button/Button.tsx";
+import {Link} from "react-router-dom";
+import {GlobalContext} from "../context/GlobalContext.tsx";
 
 const UpdateUserBtn = () => {
 
+    const {setHeader} = useContext(GlobalContext);
+
     const handleClickEvent = () => {
-        console.log("Click Event Update");
+        setHeader("Update User");
     }
 
     return (
-        <div>
-            <Button color={"bg-green-700"} handleClick={handleClickEvent}> Update </Button>
-        </div>
+        <Link to="/update">
+            <div>
+                <Button color={"bg-green-700"} handleClick={handleClickEvent}> Update </Button>
+            </div>
+        </Link>
     );
 };
 
