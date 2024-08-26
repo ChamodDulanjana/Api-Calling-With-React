@@ -1,16 +1,22 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import Button from "./button/Button.tsx";
+import {Link} from "react-router-dom";
+import {GlobalContext} from "../context/GlobalContext.tsx";
 
 const DeleteUserBtn = () => {
 
+    const {setHeader} = useContext(GlobalContext);
+
     const handleClickEvent = () => {
-        console.log("clicked");
+        setHeader("Delete User");
     }
 
     return (
-        <div>
-            <Button color={"bg-black"} handleClick={handleClickEvent}> Delete </Button>
-        </div>
+        <Link to="/delete">
+            <div>
+                <Button color={"bg-black"} handleClick={handleClickEvent}> Delete </Button>
+            </div>
+        </Link>
     );
 };
 

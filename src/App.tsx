@@ -5,6 +5,7 @@ import CreateUser from "./pages/CreateUser.tsx";
 import {GlobalContext} from "./context/GlobalContext.tsx";
 import GetUser from "./pages/GetUser.tsx";
 import UpdateUser from "./pages/UpdateUser.tsx";
+import DeleteUser from "./pages/DeleteUser.tsx";
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
                 <Route path="/create" element={<CreateUser/>}/>
                 <Route path="/get" element={<GetUser/>}/>
                 <Route path="/update" element={<UpdateUser/>}/>
+                <Route path="/delete" element={<DeleteUser/>}/>
             </Routes>
         </BrowserRouter>
 

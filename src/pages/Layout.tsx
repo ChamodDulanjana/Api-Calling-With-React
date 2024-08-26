@@ -12,13 +12,19 @@ const Layout = () => {
 
     const {setHeader} = useContext(GlobalContext);
 
+    handleSetHeader();
+
+    function handleSetHeader(){
+        setHeader("Manage Users");
+    }
+
     return (
         <div className="flex flex-row gap-16 items-center justify-center w-full">
             <CreateUserBtn/>
             <UpdateUserBtn/>
             <GetUserBtn/>
             <DeleteUserBtn/>
-            {setHeader("Manage Users")}
+            {}
         </div>
     );
 };
