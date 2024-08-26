@@ -4,17 +4,13 @@ import UpdateUserBtn from "../component/UpdateUserBtn.tsx";
 import GetUserBtn from "../component/GetUserBtn.tsx";
 import DeleteUserBtn from "../component/DeleteUserBtn.tsx";
 
-interface Props {
-    header:string;
-    setHeader: React.Dispatch<React.SetStateAction<string>>;
-}
 
 
-const Layout = ({header, setHeader}:Props) => {
+
+const Layout = () => {
     return (
         <div className="flex flex-row gap-16 items-center justify-center w-full">
-            {setHeader("Manage Users")}
-            <CreateUserBtn header={header} setHeader={setHeader} />
+            <CreateUserBtn/>
             <UpdateUserBtn/>
             <GetUserBtn/>
             <DeleteUserBtn/>

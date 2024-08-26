@@ -1,16 +1,16 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import Button from "./button/Button.tsx";
 import {Link} from "react-router-dom";
+import {GlobalContext} from "../context/GlobalContext.tsx";
 
-interface Props {
-    header:string;
-    setHeader:React.Dispatch<React.SetStateAction<string>>;
-}
 
-const CreateUserBtn = ({header, setHeader}:Props) => {
+
+const CreateUserBtn = () => {
+
+    const {header, setHeader} = useContext(GlobalContext);
 
     const handleClickEvent = () => {
-        setHeader("Register User");
+        header === "Manage Users" ? setHeader("Create Users") : setHeader("Manage Users");
     }
 
     return (
