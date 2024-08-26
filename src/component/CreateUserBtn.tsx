@@ -7,10 +7,10 @@ import {GlobalContext} from "../context/GlobalContext.tsx";
 
 const CreateUserBtn = () => {
 
-    const {header, setHeader} = useContext(GlobalContext);
+    const {setHeader} = useContext(GlobalContext);
 
     const handleClickEvent = () => {
-        header === "Manage Users" ? setHeader("Create Users") : setHeader("Manage Users");
+        setHeader("Create User");
     }
 
     return (
