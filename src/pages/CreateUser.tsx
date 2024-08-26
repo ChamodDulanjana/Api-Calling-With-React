@@ -1,6 +1,12 @@
 import React, {useState} from 'react';
 import axios from "axios";
 
+interface User{
+    uid: `${string}-${string}-${string}-${string}-${string}`;
+    name: string;
+    email: string;
+    phone_number: string;
+}
 
 const CreateUser = () => {
     const [userId, setUserId] = useState("");
@@ -13,7 +19,7 @@ const CreateUser = () => {
 
     const uuid = window.crypto.randomUUID();
 
-    const userData = {
+    const userData : User = {
         uid: uuid,
         name: userName,
         email: email,
@@ -36,7 +42,6 @@ const CreateUser = () => {
             // Handle success, maybe display a success message
         } catch (error) {
             console.error('There was an error!', error);
-            console.log(userData);
             // Handle error, maybe display an error message
         }
 
